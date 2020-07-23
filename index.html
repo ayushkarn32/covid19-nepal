@@ -6,91 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Indie+Flower&display=swap" rel="stylesheet">
    <script src="https://kit.fontawesome.com/cbb1ed9207.js" crossorigin="anonymous"></script>
 <style>
-*{
-	box-sizing: border-box;
-}
-body{
-	font-family: 'Comfortaa', cursive;
-}	
-.container{
-		display:flex;
-		width: 100%;
-		height: auto;
-}
-
-
-.flex-item{
-		text-align:center;
-        margin:0 4px;
-       }
-
-.item-1{
-	background-color:#FC5C7D;
-	flex:1;
-	border-radius: 25px;
-}
-
-.item-2{
-	background-color:#6A82FB;
-	flex:1;
-	border-radius: 25px;
-}
-
-.item-3{
-	background-color:#96c93d;
-	flex:1;
-	border-radius: 25px;
-}
-
-
-.total-stats,.info{
-		display:flex;
-		width: 100%;
-		height: auto;
-
-}
-.stats,.infom{
-	text-align: center;
-	margin:0 4px;
-}
-/*
-.fas fa-viruses{
-	width: 30px;
-	height: 30px;
-} */
-p{
-	font-weight: bold;
-	font-size: 30px
-}
-
-@media only screen and (max-width: 603px) {
-	body{
-		border:0;
-		font-size:10px;
-	}
-  .container{
-		flex-direction:column;
-		width: auto;
-		height: auto;
-	}
-	.total-stats,.info{
-		flex-direction: column;
-		height: auto;
-	}
-	.flex-item{
-		text-align:center;
-        margin:5px 0px;
-       }
-    .stats,.infom{
-	text-align: center;
-	margin:5px 0px;
-	}
-
-	p{
-		font-size: 20px;
-	}
-
-}
 </style>
 </head>
 <body>
@@ -130,36 +45,7 @@ p{
 			<h1>Total in Quarantined<br><br><i class="fas fa-hospital-user"></i></h1>
 		</div>
 	</div>
-<script>
 
-var settings = {
-  "url": "https://nepalcorona.info/api/v1/data/nepal",
-  "method": "GET",
-  "timeout": 0,
-  "headers": {
-    "Content-Type": "application/json"
-  },
-};
-
-$.ajax(settings).done(function (response) {
-  	var a=response.tested_positive;
-    var b=response.recovered;
-    var c= a-b;
-    $('#active').append("<p>" + c+"</p>");
-    $('#recovered').append("<p>" + b+"</p>");
-    $('#deaths').append(" <p> "+response.deaths+"</p>");
-
-    $('#positive').append("<p>"+response.tested_positive+"</p>");
-    $('#negative').append("<p>"+response.tested_negative+"</p>");
-    $('#total').append("<p>"+response.tested_total+"</p>");
-
-    $('#isolation').append("<p>"+response.in_isolation+"</p>");
-    $('#quarantined').append("<p>"+response.quarantined+"</p>");
-   
-});
-
-
-</script>
 </body>
 
 </html>
