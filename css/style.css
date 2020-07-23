@@ -1,0 +1,83 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Comfortaa', cursive;
+}	
+.container{
+		display:flex;
+		width: 100%;
+		height: auto;
+}
+
+
+.flex-item{
+		text-align:center;
+        margin:0 4px;
+       }
+
+.item-1{
+	background-color:#FC5C7D;
+	flex:1;
+	border-radius: 25px;
+}
+
+.item-2{
+	background-color:#6A82FB;
+	flex:1;
+	border-radius: 25px;
+}
+
+.item-3{
+	background-color:#96c93d;
+	flex:1;
+	border-radius: 25px;
+}
+
+
+.total-stats,.info{
+		display:flex;
+		width: 100%;
+		height: auto;
+
+}
+.stats,.infom{
+	text-align: center;
+	margin:0 4px;
+}
+/*
+.fas fa-viruses{
+	width: 30px;
+	height: 30px;
+} */
+p{
+	font-weight: bold;
+	font-size: 30px
+}
+
+@media only screen and (max-width: 603px) {
+	body{
+		border:0;
+		font-size:10px;
+	}
+  .container{
+		flex-direction:column;
+		width: auto;
+		height: auto;
+	}
+	.total-stats,.info{
+		flex-direction: column;
+		height: auto;
+	}
+	.flex-item{
+		text-align:center;
+        margin:5px 0px;
+       }
+    .stats,.infom{
+	text-align: center;
+	margin:5px 0px;
+	}
+
+	p{
+		font-size: 20px;
+	}
