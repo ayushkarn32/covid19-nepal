@@ -33,6 +33,11 @@ body{
 	flex:1;
 	border-radius: 25px;
 }
+.item-4{
+	background-color:#eacda3;
+	flex:1;
+	border-radius: 25px;
+}
 
 
 .total-stats,.info{
