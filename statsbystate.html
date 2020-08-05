@@ -63,11 +63,11 @@ function myfunction(){
 	$("#container").css("display", "block");
 
 
-	a.map((sname) => {
+		a.map((sname) => {
 				  sname.province.active.map((i) => {
 				    if(i.province == states) {
-				      $('#stcount').append(i.count)
-				      $('#stateno').append(Intl.NumberFormat('en-US').format(i.province))
+				      $('#stcount').append(Intl.NumberFormat('en-US').format(i.count))
+				      $('#stateno').append(i.province)
 				    }
 				  })
 			})
@@ -91,7 +91,7 @@ function myfunction(){
 			})
 
 
-	a.map((sname) => {
+		a.map((sname) => {
 				  sname.province.cases.map((i) => {
 				    if(i.province == states) {
 				      $('#tscount').append(Intl.NumberFormat('en-US').format(i.count))
